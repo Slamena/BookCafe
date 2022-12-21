@@ -19,4 +19,4 @@ const schema = new Schema(
     { timestamps: true }
 );
 
-export const RecipeModel = model<BooksDocument>('books', schema);
+export const BookModel = model<BooksDocument>('book', schema);

@@ -15,4 +15,4 @@ const schema = new Schema(
     { timestamps: true }
 );
 
-export const RecipeModel = model<UserDocument>('users', schema);
+export const RecipeModel = model<UserDocument>('user', schema);
