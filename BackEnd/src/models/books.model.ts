@@ -1,4 +1,5 @@
 import { model, Schema, Document } from 'mongoose';
+import { CommentDocument } from './commets.model';
 
 export interface BooksDocument extends Document {
     name: string;
@@ -6,6 +7,7 @@ export interface BooksDocument extends Document {
     sinopsis: string;
     rate: number;
     img: string;
+    comments: CommentDocument;
 }
 
 const schema = new Schema(
@@ -14,6 +16,7 @@ const schema = new Schema(
         author: { type: String, required: true },
         sinopsis: { type: String, required: true },
         rate: { type: Number, required: true },
+        commet: { type: Object},
         img: { type: String },
     },
     { timestamps: true }
